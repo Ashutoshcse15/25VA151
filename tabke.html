@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bus Reservation</title>
+</head>
+<body style="font-family: Arial; background-color: #f2f2f2;">
+
+    <h1 style="text-align: center;">🚌 Online Bus Reservation Form</h1>
+
+    <form action="submit_reservation.php" method="post" style="background: white; max-width: 500px; margin: auto; padding: 20px; border-radius: 10px;">
+
+        <!-- Passenger Information -->
+        <h3>Passenger Details</h3>
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+
+        <!-- Journey Details -->
+        <h3>Journey Details</h3>
+        <label for="from">From:</label><br>
+        <input type="text" id="from" name="from" placeholder="Departure city" required><br><br>
+
+        <label for="to">To:</label><br>
+        <input type="text" id="to" name="to" placeholder="Destination city" required><br><br>
+
+        <label for="date">Travel Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Departure Time:</label><br>
+        <input type="time" id="time" name="time"><br><br>
+
+        <label for="bus_type">Bus Type:</label><br>
+        <select id="bus_type" name="bus_type" required>
+            <option value="">-- Select Bus Type --</option>
+            <option value="AC">AC Bus</option>
+            <option value="Non-AC">Non-AC Bus</option>
+            <option value="Sleeper">Sleeper Bus</option>
+        </select><br><br>
+
+        <!-- Seat Selection -->
+        <h3>Seat Selection</h3>
+        <label>Seat Preference:</label><br>
+        <input type="radio" id="window" name="seat" value="Window">
+        <label for="window">Window</label><br>
+
+        <input type="radio" id="aisle" name="seat" value="Aisle">
+        <label for="aisle">Aisle</label><br>
+
+        <input type="radio" id="any" name="seat" value="Any" checked>
+        <label for="any">Any Available</label><br><br>
+
+        <!-- Payment Section -->
+        <h3>Payment Details</h3>
+        <label for="payment">Payment Method:</label><br>
+        <select id="payment" name="payment" required>
+            <option value="">-- Select Payment Method --</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="UPI">UPI</option>
+            <option value="Cash">Cash on Boarding</option>
+        </select><br><br>
+
+        <!-- Submit and Reset Buttons -->
+        <input type="submit" value="Book Ticket" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+        <input type="reset" value="Reset Form" style="background-color: red; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+
+    </form>
+
+</body>
+</html>
